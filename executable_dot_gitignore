@@ -1,0 +1,16 @@
+.DS_Store
+.ruby-version
+.rbenv-version
+.rbenv-gemsets
+.bundle
+*.code-workspace
+vendor/gems
+vendor/bundle
+*/vendor/gems
+*/vendor/bundle
+tags
+yarn.lock
+node_modules/*
+
+default-gems
+/provisioning/docker/*

@@ -1,0 +1,73 @@
+[user]
+    name = Takeshi Yabe
+    email = git@tyabe.dev
+[color]
+    ui = auto
+[include]
+    path = .gitconfig.local
+[push]
+    default = simple
+[core]
+    excludesfile = ~/.gitignore
+    autocrlf = input
+    editor = vim
+[branch]
+    autosetuprebase = always
+[merge]
+    ff = false
+[pull]
+    rebase = true
+[diff]
+    algorithm = patience
+    compactionHeuristic = true
+[pager]
+    log = diff-highlight | less
+    show = diff-highlight | less
+    diff = diff-highlight | less
+[browse-remote "github.com"]
+    top = https://{host}/{path}
+    ref = https://{host}/{path}/tree/{short_ref}
+    rev = https://{host}/{path}/commit/{commit}
+    file = "https://{host}/{path}/blob/{short_rev}/{file}{line && \"#L%d\" % line}"
+[github]
+    user = tyabe
+[heroku]
+    account = tyabe
+[alias]
+    n = now --all --stat
+    st = status -s -b
+    sh = show
+    so = remote show origin
+    ft = fetch
+    up = pull --rebase --prune
+    rbm = rebase master
+    ad = add
+    c = commit -v
+    ci = commit -a
+    cam = commit -a --amend
+    co = checkout
+    r = browse-remote
+    fpush = push --force-with-lease
+    b = branch
+    br = branch --remote
+    ba = branch -a
+    bm = branch --merged
+    bn = branch --no-merged
+    wc = whatchanged
+    ls = log --stat
+    lp = log -p
+    la = log --pretty=\"format:%ad %h (%an): %s\" --date=short
+    lr = log origin
+    one = log --pretty=oneline
+    rank = shortlog -s -n --no-merges
+    di = diff
+    dm = diff master
+    dw = diff --word-diff
+    dc = diff --cached
+    ds = diff --staged
+    d1 = diff HEAD~
+    d2 = diff HEAD~~
+    edit-unmerged = "!f() { git ls-files --unmerged | cut -f2 | short -u ; }; vim `f`"
+    add-unmerged = "!f() { git ls-files --unmerged | cut -f2 | short -u ; }; git add `f`"
+    gr = grep
+    gn = grep -n
