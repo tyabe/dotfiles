@@ -1,0 +1,9 @@
+[profile default]
+output = json
+region = ap-northeast-1
+[default]
+output = json
+region = ap-northeast-1
+[profile localstack]
+region = us-east-1
+output = json
